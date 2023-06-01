@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { UserMenu } from './UserMenu';
 
 export const App = () => {
   const [firsVtvalue, setFirstValue] = useState(0);
@@ -16,6 +17,7 @@ export const App = () => {
       <button type="button" onClick={() => setSecondValue(secondValue + 1)}>
         Second:{secondValue}
       </button>
+      <UserMenu />
     </div>
   );
 };
