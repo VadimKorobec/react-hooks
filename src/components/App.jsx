@@ -5,7 +5,6 @@ import { Player } from './Player';
 export const App = () => {
   const [firsVtvalue, setFirstValue] = useState(0);
   const [secondValue, setSecondValue] = useState(0);
-  const [btnValue, setBtnvalue] = useState(0);
   const valueRef = useRef(0);
 
   useEffect(() => {
