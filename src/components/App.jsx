@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { UserMenu } from './UserMenu';
 import { Player } from './Player';
+import { SignupForm } from './SignupForm';
 
 export const App = () => {
   const [firsVtvalue, setFirstValue] = useState(0);
@@ -30,6 +31,7 @@ export const App = () => {
       <UserMenu />
       <button onClick={handleClick}>Button with ref</button>
       <Player sourse="http://media.w3.org/2010/05/sintel/trailer.mp4" />
+      <SignupForm />
     </div>
   );
 };
