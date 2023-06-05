@@ -4,14 +4,28 @@ export const SignupForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleEmailChange = event => {
-    console.log(event.target.value);
-    setEmail(event.target.value);
-  };
+  //   const handleEmailChange = event => {
+  //     console.log(event.target.value);
+  //     setEmail(event.target.value);
+  //   };
 
-  const handlePasswordChange = event => {
-    console.log(event.target.value);
-    setPassword(event.target.value);
+  //   const handlePasswordChange = event => {
+  //     console.log(event.target.value);
+  //     setPassword(event.target.value);
+  //   };
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    switch (name) {
+      case 'email':
+        setEmail(value);
+        break;
+      case 'password':
+        setPassword(value);
+        break;
+      default:
+        return;
+    }
   };
 
   return (
@@ -22,7 +36,7 @@ export const SignupForm = () => {
           <input
             type="email"
             name="email"
-            onChange={handleEmailChange}
+            onChange={handleChange}
             value={email}
           />
         </label>
@@ -31,7 +45,7 @@ export const SignupForm = () => {
           <input
             type="password"
             name="password"
-            onChange={handlePasswordChange}
+            onChange={handleChange}
             value={password}
           />
         </label>
